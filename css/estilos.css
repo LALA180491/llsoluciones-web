@@ -1,0 +1,575 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* =========================================
+   CONFIGURACIÓN GENERAL DE LA PÁGINA
+========================================= */
+
+html {
+
+    /*
+        Hace que los enlaces internos
+        se desplacen suavemente.
+    */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #333333;
+}
+header {
+    background-color: #1f2937;
+    padding: 20px 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    color: white;
+    font-size: 28px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* =========================================
+   SECCIÓN PRINCIPAL / HERO
+   ========================================= */
+
+.hero {
+
+    /* Altura mínima de la sección.
+       70vh significa 70% de la altura
+       visible de la pantalla. */
+    min-height: 70vh;
+
+    /* Activa Flexbox para acomodar
+       fácilmente el contenido. */
+    display: flex;
+
+    /* Centra horizontalmente el contenido. */
+    justify-content: center;
+
+    /* Centra verticalmente el contenido. */
+    align-items: center;
+
+    /* Centra el texto. */
+    text-align: center;
+
+    /* Espacio interior para que el contenido
+       no quede pegado a los bordes. */
+    padding: 40px;
+
+    /* Color de fondo de la portada. */
+    background-color: #eaf4f8;
+}
+
+
+/* Contenedor interno de la portada */
+.hero-contenido {
+
+    /* Evita que el texto se extienda demasiado
+       en monitores grandes. */
+    max-width: 800px;
+}
+
+
+/* Título principal dentro del Hero */
+.hero h2 {
+
+    /* Tamaño de la letra. */
+    font-size: 48px;
+
+    /* Color del texto. */
+    color: #1f2937;
+
+    /* Espacio debajo del título. */
+    margin-bottom: 20px;
+}
+
+
+/* Párrafo de la portada */
+.hero p {
+
+    /* Tamaño del texto. */
+    font-size: 20px;
+
+    /* Separación entre líneas. */
+    line-height: 1.6;
+
+    /* Color gris del texto. */
+    color: #555555;
+
+    /* Espacio debajo del párrafo. */
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   BOTÓN PRINCIPAL
+   ========================================= */
+
+.boton {
+
+    /* Permite darle dimensiones y espacios
+       al enlace como si fuera un botón. */
+    display: inline-block;
+
+    /* Espacio interior:
+       14px arriba/abajo
+       28px izquierda/derecha */
+    padding: 14px 28px;
+
+    /* Color de fondo. */
+    background-color: #2563eb;
+
+    /* Color del texto. */
+    color: white;
+
+    /* Quita el subrayado típico de los enlaces. */
+    text-decoration: none;
+
+    /* Redondea las esquinas. */
+    border-radius: 8px;
+
+    /* Texto ligeramente más grueso. */
+    font-weight: bold;
+
+    /* Hace más suave el cambio de color
+       cuando pasamos el mouse. */
+    transition: 0.3s;
+}
+
+
+/* :hover significa:
+   cuando colocamos el mouse encima */
+.boton:hover {
+
+    /* Cambia a un azul más oscuro. */
+    background-color: #1d4ed8;
+}
+/* =========================================
+   SECCIÓN DE SERVICIOS
+========================================= */
+
+.servicios {
+
+    /* Espacio interior de la sección */
+    padding: 70px 40px;
+
+    /* Fondo blanco para diferenciarla del hero */
+    background-color: white;
+
+    /* Centra los textos principales */
+    text-align: center;
+}
+
+
+/* Título de la sección */
+.servicios h2 {
+
+    /* Tamaño del título */
+    font-size: 36px;
+
+    /* Color oscuro */
+    color: #1f2937;
+
+    /* Espacio debajo */
+    margin-bottom: 10px;
+}
+
+
+/* Texto introductorio */
+.servicios-intro {
+
+    /* Color gris */
+    color: #666666;
+
+    /* Tamaño de texto */
+    font-size: 18px;
+
+    /* Espacio antes de las tarjetas */
+    margin-bottom: 40px;
+}
+
+
+/* =========================================
+   CUADRÍCULA DE TARJETAS
+========================================= */
+
+.servicios-grid {
+
+    /* Activa CSS Grid */
+    display: grid;
+
+    /*
+        Crea columnas automáticas.
+
+        repeat = repetir columnas
+        auto-fit = crea tantas como quepan
+        minmax = cada tarjeta tendrá como mínimo
+                 250px y podrá crecer hasta ocupar
+                 el espacio disponible
+    */
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    /* Espacio entre tarjetas */
+    gap: 25px;
+
+    /* Limita el ancho total */
+    max-width: 1200px;
+
+    /* Centra la cuadrícula */
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   TARJETAS DE SERVICIO
+========================================= */
+
+.tarjeta-servicio {
+
+    /* Fondo de la tarjeta */
+    background-color: #f8fafc;
+
+    /* Espacio interior */
+    padding: 30px;
+
+    /* Bordes redondeados */
+    border-radius: 12px;
+
+    /* Sombra suave */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    /* Alinea el texto a la izquierda */
+    text-align: left;
+
+    /* Hace suave la animación */
+    transition: 0.3s;
+}
+
+
+/* Efecto al pasar el mouse */
+.tarjeta-servicio:hover {
+
+    /*
+        Mueve la tarjeta ligeramente
+        hacia arriba
+    */
+    transform: translateY(-5px);
+
+    /* Aumenta ligeramente la sombra */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Título de cada servicio */
+.tarjeta-servicio h3 {
+
+    /* Tamaño */
+    font-size: 22px;
+
+    /* Color */
+    color: #2563eb;
+
+    /* Espacio debajo */
+    margin-bottom: 15px;
+}
+
+
+/* Texto de cada tarjeta */
+.tarjeta-servicio p {
+
+    /* Tamaño del texto */
+    font-size: 16px;
+
+    /* Separación entre líneas */
+    line-height: 1.6;
+
+    /* Color */
+    color: #555555;
+}
+/* =========================================
+   SECCIÓN NOSOTROS
+========================================= */
+
+.nosotros {
+
+    /* Espacio interior de toda la sección */
+    padding: 70px 40px;
+
+    /* Fondo ligeramente diferente */
+    background-color: #f8fafc;
+}
+
+
+/* Contenedor principal */
+.nosotros-contenedor {
+
+    /* Limita el ancho de la sección */
+    max-width: 1200px;
+
+    /* Centra el contenedor */
+    margin: 0 auto;
+
+    /* Activa Flexbox */
+    display: flex;
+
+    /* Separa las dos columnas */
+    gap: 50px;
+
+    /* Centra verticalmente ambas columnas */
+    align-items: center;
+}
+
+
+/* Columna de texto */
+.nosotros-texto {
+
+    /* Hace que ocupe una parte del espacio */
+    flex: 1;
+}
+
+
+/* Título */
+.nosotros-texto h2 {
+
+    /* Tamaño del título */
+    font-size: 36px;
+
+    /* Color */
+    color: #1f2937;
+
+    /* Espacio debajo */
+    margin-bottom: 20px;
+}
+
+
+/* Párrafos */
+.nosotros-texto p {
+
+    /* Tamaño del texto */
+    font-size: 18px;
+
+    /* Separación entre líneas */
+    line-height: 1.7;
+
+    /* Color gris */
+    color: #555555;
+
+    /* Espacio entre párrafos */
+    margin-bottom: 15px;
+}
+
+
+/* Columna de imagen */
+.nosotros-imagen {
+
+    /* Hace que tenga el mismo peso que el texto */
+    flex: 1;
+}
+
+
+/* Bloque temporal mientras agregamos imagen real */
+.imagen-placeholder {
+
+    /* Altura del bloque */
+    min-height: 300px;
+
+    /* Fondo suave */
+    background-color: #dbeafe;
+
+    /* Bordes redondeados */
+    border-radius: 14px;
+
+    /* Centra el contenido */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Texto */
+    font-size: 22px;
+    color: #1e3a8a;
+
+    /* Texto centrado */
+    text-align: center;
+}
+/* =========================================
+   SECCIÓN CONTACTO
+========================================= */
+
+.contacto {
+
+    /* Espacio interior de la sección */
+    padding: 70px 40px;
+
+    /* Fondo oscuro */
+    background-color: #1f2937;
+
+    /* Texto blanco */
+    color: white;
+
+    /* Centra el contenido */
+    text-align: center;
+}
+
+
+/* Contenedor principal */
+.contacto-contenedor {
+
+    /* Limita el ancho */
+    max-width: 1200px;
+
+    /* Centra el contenedor */
+    margin: 0 auto;
+}
+
+
+/* Título */
+.contacto h2 {
+
+    /* Tamaño del título */
+    font-size: 36px;
+
+    /* Espacio debajo */
+    margin-bottom: 10px;
+}
+
+
+/* Texto introductorio */
+.contacto-intro {
+
+    /* Tamaño */
+    font-size: 18px;
+
+    /* Color ligeramente gris */
+    color: #d1d5db;
+
+    /* Espacio inferior */
+    margin-bottom: 40px;
+}
+
+
+/* =========================================
+   TARJETAS DE CONTACTO
+========================================= */
+
+.contacto-datos {
+
+    /* Utilizamos Grid */
+    display: grid;
+
+    /* Crea columnas adaptables */
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    /* Separación entre tarjetas */
+    gap: 25px;
+
+    /* Espacio debajo */
+    margin-bottom: 40px;
+}
+
+
+/* Cada tarjeta */
+.contacto-item {
+
+    /* Fondo un poco más claro */
+    background-color: #374151;
+
+    /* Espacio interior */
+    padding: 25px;
+
+    /* Esquinas redondeadas */
+    border-radius: 12px;
+}
+
+
+/* Títulos de las tarjetas */
+.contacto-item h3 {
+
+    /* Espacio inferior */
+    margin-bottom: 15px;
+
+    /* Tamaño */
+    font-size: 21px;
+}
+
+
+/* Párrafos */
+.contacto-item p {
+
+    /* Separación entre líneas */
+    line-height: 1.6;
+
+    /* Color gris claro */
+    color: #e5e7eb;
+}
+
+
+/* =========================================
+   BOTÓN DE WHATSAPP
+========================================= */
+
+.boton-whatsapp {
+
+    /* Permite tratar el enlace como botón */
+    display: inline-block;
+
+    /* Espacio interior */
+    padding: 15px 30px;
+
+    /* Verde similar a WhatsApp */
+    background-color: #25d366;
+
+    /* Texto blanco */
+    color: white;
+
+    /* Elimina el subrayado */
+    text-decoration: none;
+
+    /* Esquinas redondeadas */
+    border-radius: 8px;
+
+    /* Texto más grueso */
+    font-weight: bold;
+
+    /* Animación suave */
+    transition: 0.3s;
+}
+
+
+/* Efecto al colocar el mouse */
+.boton-whatsapp:hover {
+
+    /* Verde ligeramente más oscuro */
+    background-color: #1ebe5d;
+
+    /* Levanta ligeramente el botón */
+    transform: translateY(-2px);
+}

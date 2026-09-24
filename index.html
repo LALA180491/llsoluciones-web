@@ -5,20 +5,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
 
     <title>LLSoluciones a tu Alcance</title>
 </head>
 
 <body>
 
-    <h1>LLSoluciones a tu Alcance</h1>
+    <header>
+        <nav>
+            <h1>LLSoluciones</h1>
 
-    <h2>Soluciones tecnológicas a tu alcance</h2>
+            <!-- Menú principal de navegación -->
+    <ul>
 
-    <p>
-        Bienvenido a nuestra página web.
-        Estamos reaprendiendo a desarrollar este sitio desde cero.
+        <!-- #inicio busca un elemento con id="inicio" -->
+       <li><a href="#inicio">Inicio</a></li>
+
+        <!-- Nos lleva a la sección de servicios -->
+        <li><a href="#servicios">Servicios</a></li>
+
+        <!-- Nos lleva a la sección nosotros -->
+        <li><a href="#nosotros">Nosotros</a></li>
+
+        <!-- Nos lleva a contacto -->
+        <li><a href="#contacto">Contacto</a></li>
+
+    </ul>
+        </nav>
+    </header>
+
+    <main>
+
+    
+   <!--
+    id="inicio" permite que el menú
+    pueda regresar a esta sección.
+-->
+    <section id="inicio" class="hero">
+
+        <!-- Contenedor del contenido principal -->
+        <div class="hero-contenido">
+
+            <!-- Título principal de la página -->
+            <h2>Soluciones tecnológicas a tu alcance</h2>
+
+            <!-- Texto descriptivo -->
+            <p>
+                En LLSoluciones te ayudamos con tecnología,
+                mantenimiento, trámites y servicios digitales.
+            </p>
+
+            <!--
+                Enlace que utilizaremos como botón.
+                #servicios hará que posteriormente nos lleve
+                a la sección de servicios.
+            -->
+            <a href="#servicios" class="boton">
+                Conoce nuestros servicios
+            </a>
+
+        </div>
+
+    </section>
+    <!-- ========================================
+     SECCIÓN DE SERVICIOS
+========================================= -->
+
+<section id="servicios" class="servicios">
+
+    <!-- Título de la sección -->
+    <h2>Nuestros servicios</h2>
+
+    <!-- Texto introductorio -->
+    <p class="servicios-intro">
+        Conoce algunas de las soluciones que ofrecemos.
     </p>
+
+    <!--
+        Este contenedor agrupa todas las tarjetas.
+        Después lo convertiremos en una cuadrícula
+        usando CSS Grid.
+    -->
+    <div class="servicios-grid">
+
+        <!-- Tarjeta 1 -->
+        <article class="tarjeta-servicio">
+            <h3>Mantenimiento de computadoras</h3>
+
+            <p>
+                Limpieza, actualización, instalación de programas
+                y mantenimiento preventivo.
+            </p>
+        </article>
+
+        <!-- Tarjeta 2 -->
+        <article class="tarjeta-servicio">
+            <h3>Copias e impresiones</h3>
+
+            <p>
+                Impresiones, copias, escaneos,
+                engargolados y enmicados.
+            </p>
+        </article>
+
+        <!-- Tarjeta 3 -->
+        <article class="tarjeta-servicio">
+            <h3>Trámites digitales</h3>
+
+            <p>
+                Apoyo con CURP, actas de nacimiento,
+                Llave MX, becas y formularios.
+            </p>
+        </article>
+
+        <!-- Tarjeta 4 -->
+        <article class="tarjeta-servicio">
+            <h3>Páginas web</h3>
+
+            <p>
+                Desarrollo de sitios web para negocios,
+                emprendimientos y proyectos personales.
+            </p>
+        </article>
+
+        <!-- Tarjeta 5 -->
+        <article class="tarjeta-servicio">
+            <h3>Sistemas a la medida</h3>
+
+            <p>
+                Desarrollo de soluciones personalizadas
+                según las necesidades de cada cliente.
+            </p>
+        </article>
+
+        <!-- Tarjeta 6 -->
+        <article class="tarjeta-servicio">
+            <h3>Invitaciones digitales</h3>
+
+            <p>
+                Invitaciones personalizadas para XV años,
+                bodas, cumpleaños y todo tipo de eventos.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+<!-- ========================================
+     SECCIÓN NOSOTROS
+========================================= -->
+
+<section id="nosotros" class="nosotros">
+
+    <!-- Contenedor general de la sección -->
+    <div class="nosotros-contenedor">
+
+        <!-- Columna de texto -->
+        <div class="nosotros-texto">
+
+            <!-- Título de la sección -->
+            <h2>Sobre nosotros</h2>
+
+            <!-- Primer párrafo -->
+            <p>
+                En LLSoluciones brindamos servicios tecnológicos
+                pensados para facilitar las tareas de nuestros clientes.
+            </p>
+
+            <!-- Segundo párrafo -->
+            <p>
+                Ofrecemos mantenimiento de computadoras,
+                trámites digitales, impresiones,
+                desarrollo web y soluciones personalizadas.
+            </p>
+
+            <!-- Tercer párrafo -->
+            <p>
+                Nuestro objetivo es ofrecer atención cercana,
+                práctica y accesible.
+            </p>
+
+        </div>
+
+        <!-- Columna visual -->
+        <div class="nosotros-imagen">
+
+            <!--
+                Por ahora usaremos un bloque de prueba.
+                Más adelante aquí colocaremos una imagen real
+                o el logo de LLSoluciones.
+            -->
+            <div class="imagen-placeholder">
+                Imagen de LLSoluciones
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================================
+     SECCIÓN DE CONTACTO
+========================================= -->
+
+<section id="contacto" class="contacto">
+
+    <!-- Contenedor principal de contacto -->
+    <div class="contacto-contenedor">
+
+        <!-- Título de la sección -->
+        <h2>Contáctanos</h2>
+
+        <!-- Texto introductorio -->
+        <p class="contacto-intro">
+            ¿Necesitas alguno de nuestros servicios?
+            Estamos para ayudarte.
+        </p>
+
+
+        <!-- ==================================
+             DATOS DE CONTACTO
+        =================================== -->
+
+        <div class="contacto-datos">
+
+            <!-- Tarjeta de ubicación -->
+            <div class="contacto-item">
+
+                <h3>📍 Ubicación</h3>
+
+                <p>
+                    Col. Adolfo López Mateos<br>
+                    Oaxaca de Juárez, Oaxaca
+                </p>
+
+            </div>
+
+
+            <!-- Tarjeta de horario -->
+            <div class="contacto-item">
+
+                <h3>🕐 Horario</h3>
+
+                <p>
+                    Consulta nuestros horarios
+                    y disponibilidad.
+                </p>
+
+            </div>
+
+
+            <!-- Tarjeta de WhatsApp -->
+            <div class="contacto-item">
+
+                <h3>💬 WhatsApp</h3>
+
+                <p>
+                    Escríbenos para solicitar
+                    información o cotizaciones.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================================
+             BOTÓN DE WHATSAPP
+        =================================== -->
+
+        <a
+            href="#"
+            class="boton-whatsapp"
+        >
+            💬 Enviar mensaje por WhatsApp
+        </a>
+
+    </div>
+
+</section>
+</main>
 
 </body>
 
