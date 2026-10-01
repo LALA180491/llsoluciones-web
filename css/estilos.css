@@ -124,7 +124,52 @@ nav a:hover {
     /* Espacio debajo del párrafo. */
     margin-bottom: 30px;
 }
+/* =========================================
+   LOGO DEL ENCABEZADO
+========================================= */
 
+.logo {
+
+    /* Coloca imagen y texto uno junto al otro */
+    display: flex;
+
+    /* Los centra verticalmente */
+    align-items: center;
+
+    /* Separación entre imagen y texto */
+    gap: 12px;
+
+    /* Quita el subrayado del enlace */
+    text-decoration: none;
+
+    /* Color del nombre */
+    color: white;
+}
+
+
+/* Imagen que está dentro de .logo */
+.logo img {
+
+    /* Ancho del logo */
+    width: 60px;
+
+    /*
+        auto mantiene las proporciones originales
+        de la imagen.
+    */
+    height: auto;
+}
+
+
+/* Nombre LLSoluciones */
+.logo span {
+
+    /* Tamaño de letra */
+    font-size: 26px;
+
+    /* Texto en negritas */
+    font-weight: bold;
+}
 
 /* =========================================
    BOTÓN PRINCIPAL
@@ -396,28 +441,36 @@ nav a:hover {
 
 
 /* Bloque temporal mientras agregamos imagen real */
-.imagen-placeholder {
+/* =========================================
+   IMAGEN DE LA SECCIÓN NOSOTROS
+========================================= */
 
-    /* Altura del bloque */
-    min-height: 300px;
+.nosotros-imagen img {
 
-    /* Fondo suave */
-    background-color: #dbeafe;
+    /*
+        La imagen ocupará todo el ancho
+        disponible de su columna.
+    */
+    width: 100%;
 
-    /* Bordes redondeados */
+    /*
+        Establecemos una altura.
+    */
+    height: 350px;
+
+    /*
+        Evita que la imagen se deforme.
+
+        cover hace que cubra todo el espacio
+        aunque tenga que recortar un poco.
+    */
+    object-fit: cover;
+
+    /* Esquinas redondeadas */
     border-radius: 14px;
 
-    /* Centra el contenido */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    /* Texto */
-    font-size: 22px;
-    color: #1e3a8a;
-
-    /* Texto centrado */
-    text-align: center;
+    /* Sombra ligera */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 /* =========================================
    SECCIÓN CONTACTO
@@ -572,4 +625,167 @@ nav a:hover {
 
     /* Levanta ligeramente el botón */
     transform: translateY(-2px);
+}
+/* =========================================
+   DISEÑO RESPONSIVE
+   TABLETS Y CELULARES
+========================================= */
+
+/*
+    @media permite aplicar estilos solamente
+    cuando se cumple determinada condición.
+
+    En este caso:
+    estos estilos se aplicarán cuando la pantalla
+    mida 768px de ancho o menos.
+*/
+
+@media (max-width: 768px) {
+
+    /* =====================================
+       MENÚ DE NAVEGACIÓN
+    ===================================== */
+
+    nav {
+
+        /*
+            En computadora utilizamos los elementos
+            uno junto al otro.
+
+            En pantallas pequeñas los colocamos
+            uno debajo del otro.
+        */
+        flex-direction: column;
+
+        /* Espacio entre logo/nombre y menú */
+        gap: 20px;
+    }
+
+
+    nav ul {
+
+        /*
+            Permite que los enlaces bajen de línea
+            si no caben en la pantalla.
+        */
+        flex-wrap: wrap;
+
+        /* Centra los enlaces */
+        justify-content: center;
+
+        /* Reduce ligeramente la separación */
+        gap: 15px;
+    }
+
+
+    /* =====================================
+       HERO / PORTADA
+    ===================================== */
+
+    .hero {
+
+        /* Reducimos el espacio lateral */
+        padding: 40px 20px;
+
+        /* Reducimos ligeramente la altura */
+        min-height: 60vh;
+    }
+
+
+    .hero h2 {
+
+        /*
+            El título de 48px que usamos en PC
+            sería demasiado grande en celular.
+        */
+        font-size: 34px;
+    }
+
+
+    .hero p {
+
+        /* Texto ligeramente más pequeño */
+        font-size: 18px;
+    }
+
+
+    /* =====================================
+       SERVICIOS
+    ===================================== */
+
+    .servicios {
+
+        /* Menos espacio lateral */
+        padding: 60px 20px;
+    }
+
+
+    .servicios h2 {
+
+        /* Reducimos el título */
+        font-size: 30px;
+    }
+
+
+    /* =====================================
+       NOSOTROS
+    ===================================== */
+
+    .nosotros {
+
+        /* Reducimos márgenes interiores */
+        padding: 60px 20px;
+    }
+
+
+    .nosotros-contenedor {
+
+        /*
+            Esta es una de las partes importantes.
+
+            En computadora:
+            TEXTO | IMAGEN
+
+            En celular:
+            TEXTO
+            IMAGEN
+        */
+        flex-direction: column;
+    }
+
+
+    .nosotros-texto h2 {
+
+        /* Título más pequeño */
+        font-size: 30px;
+    }
+
+
+    /*
+        La columna de imagen ocupará
+        todo el ancho disponible.
+    */
+    .nosotros-imagen {
+        width: 100%;
+    }
+
+
+    /* =====================================
+       CONTACTO
+    ===================================== */
+
+    .contacto {
+
+        /* Reducimos espacios */
+        padding: 60px 20px;
+    }
+
+
+    .contacto h2 {
+
+        /* Título más pequeño */
+        font-size: 30px;
+    }
+    
+
 }

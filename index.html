@@ -14,7 +14,38 @@
 
     <header>
         <nav>
-            <h1>LLSoluciones</h1>
+            <!-- ========================================
+     LOGO DE LLSOLUCIONES
+========================================= -->
+
+<!--
+    Este enlace contiene el logo.
+
+    href="#inicio" hace que al hacer clic
+    sobre el logo regresemos al inicio.
+-->
+<a href="#inicio" class="logo">
+
+    <!--
+        src indica dónde se encuentra la imagen.
+
+        Como index.html está en la carpeta principal
+        y logo.png está dentro de img, utilizamos:
+        img/logo.png
+
+        alt contiene una descripción de la imagen.
+        Es importante para accesibilidad y también
+        aparece si la imagen no puede cargarse.
+    -->
+    <img
+        src="img/logo.jpeg"
+        alt="Logo de LLSoluciones"
+    >
+
+    <!-- Nombre de la empresa -->
+    <span>LLSoluciones</span>
+
+</a>
 
             <!-- Menú principal de navegación -->
     <ul>
@@ -66,6 +97,13 @@
             </a>
 
         </div>
+        <!--
+    Botón que ejecutará una función
+    de JavaScript al hacer clic.
+-->
+    <button id="btnBienvenida">
+            Conoce LLSoluciones
+    </button>
 
     </section>
     <!-- ========================================
@@ -189,18 +227,21 @@
         </div>
 
         <!-- Columna visual -->
-        <div class="nosotros-imagen">
+        <!-- Columna de imagen -->
+<div class="nosotros-imagen">
 
-            <!--
-                Por ahora usaremos un bloque de prueba.
-                Más adelante aquí colocaremos una imagen real
-                o el logo de LLSoluciones.
-            -->
-            <div class="imagen-placeholder">
-                Imagen de LLSoluciones
-            </div>
+    <!--
+        Imagen representativa de LLSoluciones.
 
-        </div>
+        src = ubicación del archivo
+        alt = descripción de la imagen
+    -->
+    <img
+        src="img/nosotros.jpeg"
+        alt="Servicios tecnológicos de LLSoluciones"
+    >
+
+</div>
 
     </div>
 
@@ -286,6 +327,13 @@
 
 </section>
 </main>
+<!--
+    Conectamos nuestro archivo JavaScript.
+
+    src indica la ubicación del archivo.
+    En este caso, está dentro de la carpeta js.
+-->
+<script src="js/script.js"></script>
 
 </body>
 
